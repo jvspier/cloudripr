@@ -1,0 +1,35 @@
+name = "icloud"
+username = "you@example.com"
+directory = "/downloads"
+cron = "0 3 * * *"
+enabled = true
+timezone = "Europe/Amsterdam"
+library_kind = "shared"
+
+[icloudpd]
+domain = "com"
+folder_structure = "{:%Y/%m}"
+size = [
+    "original",
+]
+live_photo_size = "original"
+force_size = false
+align_raw = "original"
+keep_unicode_in_filenames = false
+set_exif_datetime = false
+live_photo_mov_filename_policy = "suffix"
+file_match_policy = "name-size-dedup-with-suffix"
+xmp_sidecar = false
+use_os_locale = false
+skip_videos = false
+skip_photos = false
+skip_live_photos = false
+auto_delete = false
+dry_run = false
+log_level = "info"
+
+[filters]
+file_suffixes = []
+match_patterns = []
+device_makes = []
+device_models = []

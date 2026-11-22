@@ -1,0 +1,26 @@
+node_modules
+.next
+*.pyc
+__pycache__
+out
+web/.env.local
+.env
+.env.*
+!.env.example
+src/cloudripr/webapp
+src/cloudripr/web_dist/*
+!src/cloudripr/web_dist/.gitkeep
+tsconfig.tsbuildinfo
+logs
+.claude
+.coverage
+coverage.xml
+.coverage-html/
+web/coverage/
+dist/
+.dev-data/
+.dev-data-sim/
+
+# Brainstorming mockups (local only)
+.superpowers/
+.screenshots-demo/

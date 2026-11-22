@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@import "@fontsource-variable/inter";
+
+:root {
+  --page: #f5f4fb;
+  --card: #ffffff;
+  --text: #1a1830;
+  --muted: #6b6880;
+  --line: #e7e5f2;
+  --violet-1: #7c5cff;
+  --violet-2: #5a36f0;
+  --red-1: #ef4444;
+  --red-2: #b91c1c;
+  --green-1: #22c55e;
+  --green-2: #15803d;
+  --pill: #ffd34d;
+  --soft-violet: #ece8ff;
+  --soft-red: #fde8e8;
+  --soft-green: #e3f7ea;
+  --accent-text: #5a36f0;
+  color-scheme: light;
+}
+
+/* data-theme is set before first paint (index.html, src/lib/theme.ts): the user's
+   choice, or the device setting when on Automatic. */
+:root[data-theme="dark"] {
+  --page: #0f0e17;
+  --card: #1c1a29;
+  --text: #f4f3fa;
+  --muted: #a19eb5;
+  --line: #2c2940;
+  --soft-violet: #2a2450;
+  --soft-red: #3a1c22;
+  --soft-green: #17301f;
+  --accent-text: #c4b5ff;
+  color-scheme: dark;
+}
+
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme inline {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, sans-serif;
+  --color-page: var(--page);
+  --color-card: var(--card);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-violet: var(--violet-2);
+  --color-violet-light: var(--violet-1);
+  --color-red: var(--red-1);
+  --color-red-dark: var(--red-2);
+  --color-green: var(--green-1);
+  --color-green-dark: var(--green-2);
+  --color-pill: var(--pill);
+  --color-soft-violet: var(--soft-violet);
+  --color-soft-red: var(--soft-red);
+  --color-soft-green: var(--soft-green);
+  --color-accent: var(--accent-text);
+  --radius-card: 20px;
+}
+
+html,
+body {
+  background: var(--page);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-tap-highlight-color: transparent;
+  overscroll-behavior-y: none;
+}
+
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
+.bg-grad-violet {
+  background: linear-gradient(135deg, var(--violet-1), var(--violet-2));
+}
+.bg-grad-red {
+  background: linear-gradient(135deg, var(--red-1), var(--red-2));
+}
+.bg-grad-green {
+  background: linear-gradient(135deg, var(--green-1), var(--green-2));
+}
